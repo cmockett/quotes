@@ -1,0 +1,41 @@
+.bodyClass{
+	background-color: #6534ff;
+	margin: -21px 0px 0px 0px;
+}
+.headerDiv{
+	width:70vw;
+	/*margin: -20vh 0vw 0vh 0vw;*/
+	/*position:fixed;*/
+	height:80px;
+	background-color: #62bcfa;
+	color:white;
+}
+.centralDiv{
+	/*display:inline-block;*/
+	width:70vw;
+	height: 100em;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	background-color: #bbc4ef;
+}
+
+.formClass{
+/*	width:70vw;
+	height:80px;*/
+	/*position:fixed;*/
+	/*margin:90vh 15vw 0vh 15vw;*/
+/*	background-color: red;*/
+}
+.formClass input{
+	/*display:block;*/
+	background-color: #fccdd3
+}
+.authorInput{
+	width:10vw;
+}
+.quoteInput{
+	width:45vw;
+}
+.submitButton{
+	float:right;
+}
