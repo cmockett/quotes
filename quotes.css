@@ -39,3 +39,15 @@
 .submitButton{
 	float:right;
 }
+.quoteDiv{
+	width:60vw;
+	margin-left:5vw;
+	margin-right:5vw;
+	background-color: navy;
+	height:100px;
+	color:white;
+}
+.deleteButton {
+	float:right;
+	background-color: #fccdd3;
+}
