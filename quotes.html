@@ -12,12 +12,23 @@
 			<form class="formClass" ng-submit="submit()">
 				<input type="text" placeholder="New Author" name="New Author" class="authorInput" ng-model="authorToAdd">
 				<input type="text" placeholder="New Quote" name="New Quote" class="quoteInput" ng-model="quoteToAdd">
-				<input type="submit" value="submit" class="submitButton">
+				<input type="submit" value="Submit" class="submitButton">
 			</form>
 		</div>
 		<div ng-repeat="newQuote in quoteArray track by $index" class="quoteDiv">Author:{{newQuote.author}}
-		<button class="deleteButton" ng-click="deleteClick($index)">Delete??</button>
-		<br>Quote:{{newQuote.quote}}
+			<form >
+				<select class="ratingSelect" name="Rating">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<input type="submit" value="Submit Rating" class="submitRating" ng-click="submitRating($index)" ng-model="ratingToAdd">
+			</form>
+			<button class="deleteButton" ng-click="deleteClick($index)">Delete??</button>
+			<br>Quote:{{newQuote.quote}}
 		</div> 
 			
 

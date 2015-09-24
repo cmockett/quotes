@@ -45,7 +45,15 @@
 	margin-right:5vw;
 	background-color: navy;
 	height:100px;
-	color:white;
+	color:#62bcfa;
+}
+.ratingSelect{
+	float:right;
+	background-color: #fccdd3;
+}
+.submitRating{
+	float:right;
+	background-color: #fccdd3;
 }
 .deleteButton {
 	float:right;
