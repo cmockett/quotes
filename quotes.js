@@ -15,6 +15,9 @@ var quotesfunction = function($scope){
 		$scope.author = ""
 
 
+		$scope.deleteClick = function($index){
+			$scope.quoteArray.splice($index,1)
+		}
 
 
 
@@ -22,12 +25,9 @@ var quotesfunction = function($scope){
 		// 	$scope.quoteArray.push(this.text);
 		// 	$scope.text="";
 		// }
+	}
 			
 		
-	$scope.deleteClick = function(){
-		$scope.quoteArray.pop(quoteObject)
-	}
-	}
 
 
 

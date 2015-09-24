@@ -16,7 +16,7 @@
 			</form>
 		</div>
 		<div ng-repeat="newQuote in quoteArray track by $index" class="quoteDiv">Author:{{newQuote.author}}
-		<button class="deleteButton" ng-click="deleteClick()">Delete??</button>
+		<button class="deleteButton" ng-click="deleteClick($index)">Delete??</button>
 		<br>Quote:{{newQuote.quote}}
 		</div> 
 			
