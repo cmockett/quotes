@@ -8,24 +8,22 @@
 <body class="bodyClass" ng-controller="myController">
 	<div class="centralDiv">
 		<div class="headerDiv">
-			<h1>Quotes...</h1>
+			<h1>Quotes...</h1><button type="submit" class="randomButton" ng-click="randomButton()">Random Quote!</button>
 			<form class="formClass" ng-submit="submit()">
 				<input type="text" placeholder="New Author" name="New Author" class="authorInput" ng-model="authorToAdd">
 				<input type="text" placeholder="New Quote" name="New Quote" class="quoteInput" ng-model="quoteToAdd">
 				<input type="submit" value="Submit" class="submitButton">
 			</form>
 		</div>
-		<div ng-repeat="newQuote in quoteArray | orderBy : '-rating'"- class="quoteDiv">Author:{{newQuote.author}}
+		<div ng-repeat="newQuote in quoteArray | orderBy : '-rating'"- class="quoteDiv"><a ng-click="authorClick($index)">Author:{{newQuote.author}}</a>
 			<form >
 				<select class="ratingSelect" name="Rating" ng-model="newQuote.rating">
-					<option value="0" ng-value="rating0">0</option>
-					<option value="1" ng-value="rating1">1</option>
-					<option value="2" ng-value="rating2">2</option>
-					<option value="3" ng-value="rating3">3</option>
-					<option value="4" ng-value="rating4">4</option>
-					<option value="5" ng-value="rating5">5</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
 				</select>
-				<input type="submit" value="Submit Rating" class="submitRating" ng-click="submitRating($index)">
 			</form>
 			<button class="deleteButton" ng-click="deleteClick($index)">Delete??</button>
 			<br>Quote:{{newQuote.quote}}

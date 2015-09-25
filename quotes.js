@@ -16,24 +16,31 @@ var quotesfunction = function($scope){
 		$scope.deleteClick = function($index){
 			$scope.quoteArray.splice($index,1)
 		}
-
-		// quoteObject.rating = $scope.ratingToAdd 
-		$scope.submitRating = function($index){
-			// quoteObject.rating = $scope.ratingToAdd
-			// $scope.quoteArray.sort(quoteObject.rating)
-			
-
-			console.log($scope.quoteArray)
-		// $scope.rating0 = quoteObject.rating = 0
-		// $scope.rating1 = quoteObject.rating = 1
-		// $scope.rating2 = quoteObject.rating = 2
-		// $scope.rating3 = quoteObject.rating = 3
-		// $scope.rating4 = quoteObject.rating = 4
-		// $scope.rating5 = quoteObject.rating = 5
+		$scope.randomButton = function(){
+			// console.log("Hi!")
+			// console.log($scope.quoteArray)
+			$scope.randomObject = $scope.quoteArray[Math.floor(Math.random()*($scope.quoteArray.length-1))]
+			confirm($scope.randomObject.quote)
+		}
+		$scope.authorClick = function($index){
+			$scope.newAuthorArray = []
+			$scope.author = quoteObject[$index].author
+			// var callbackFunction = function(){
+				for (var i=0; i<$scope.quoteArray.length; i++){
+					if(quoteObject[i].author === $scope.author){
+						$scope.newAuthorArray.push(quoteObject)
+				console.log($scope.newAuthorArray)
+				}
+					// }
+			}
+			// console.log("author!")
+			// $scope.quoteArray.filter(callbackFunction(author)){
 		}
 
+		}
+		
 
-		// $scope.ratingToAdd = quoteObject.rating
+
 	}
 
 			
@@ -41,6 +48,6 @@ var quotesfunction = function($scope){
 
 
 
-}
+
 
 angular.module("myApp").controller("myController", ["$scope", quotesfunction])

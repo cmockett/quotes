@@ -9,6 +9,11 @@
 	height:80px;
 	background-color: #62bcfa;
 	color:white;
+	/*display:inline-block;*/
+}
+.randomButton{
+	float:right;
+	background-color: #fccdd3;
 }
 .centralDiv{
 	/*display:inline-block;*/
